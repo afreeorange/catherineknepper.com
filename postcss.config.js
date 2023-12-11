@@ -11,7 +11,7 @@ const plugins = {
         return postcss([require("postcss-import")]).process(root, result.opts);
       },
     },
-    require("@tailwindcss/nesting")(require("postcss-nesting")),
+    require("@tailwindcss/nesting"),
     require("tailwindcss"),
     require("autoprefixer"),
   ],

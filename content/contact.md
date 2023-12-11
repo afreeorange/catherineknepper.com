@@ -8,7 +8,7 @@ eleventyNavigation:
   order: 6
 ---
 
-### Ready to discuss your project? <br /> Please reach out and I'll get in touch with you soon!
+### Ready to discuss your project? Please reach out and I'll get in touch with you soon!
 
 <form name="contact" method="POST" data-netlify="true">
   <p>

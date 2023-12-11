@@ -1,4 +1,4 @@
-import { h, ComponentChildren } from "preact";
+import { h, Fragment, ComponentChildren } from "preact";
 import { render as r } from "preact-render-to-string";
 
 import eleventyNavigation from "@11ty/eleventy-navigation";
@@ -23,7 +23,7 @@ const Shell = ({
 }) => (
   <html lang="en-US">
     <head>
-      <title></title>
+      <title>{data.title} &ndash; Catherine Knepper</title>
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 
@@ -83,6 +83,18 @@ const Shell = ({
             Plausible
           </a>{" "}
           for this website&#8217;s analytics.
+          {data.stub === "about" && (
+            <>
+              <br />
+              Photo by{" "}
+              <a
+                href="https://kathryngamble.com/"
+                title="Kathryn Gamble, Photographer"
+              >
+                Kathryn Gamble
+              </a>{" "}
+            </>
+          )}
         </p>
       </footer>
     </body>
