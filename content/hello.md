@@ -15,12 +15,12 @@ My clients are novelists, short story writers, memoirists, entrepreneurs, scient
 The work we've done together has been published by Berkley Books, Bloomsbury, _The Boston Globe_, Broadway, Crown, _Harvard Business Review_ & HBR Press, Hyperion, Lake Union Publishing, Oxford University Press, O'Reilly Media, Penguin Random House, Permanent Press, Rodale, Sarabande Books, Seal Press, Simon & Schuster, Skyhorse Publishing, Sourcebooks, Spiegel & Grau, St. Martin's Press, and many university and independent presses.
 
 <div class="books">
-  <div class="cover"><img src="/assets/img/books/anxious.jpeg" /></div>
   <div class="cover"><img src="/assets/img/books/burnout.jpeg" /></div>
+  <div class="cover"><img src="/assets/img/books/anxious.jpeg" /></div>
   <div class="cover"><img src="/assets/img/books/design.jpeg" /></div>
-  <div class="cover"><img src="/assets/img/books/eat.jpeg" /></div>
-  <div class="cover"><img src="/assets/img/books/heal.jpeg" /></div>
+  <div class="cover"><img src="/assets/img/books/leader.png" /></div>
   <div class="cover"><img src="/assets/img/books/waitress.jpeg" /></div>
   <div class="cover"><img src="/assets/img/books/wholebody.jpeg" /></div>
-  <div class="cover"><img src="/assets/img/books/leader.png" /></div>
+  <div class="cover"><img src="/assets/img/books/eat.jpeg" /></div>
+  <div class="cover"><img src="/assets/img/books/heal.jpeg" /></div>
 </div>

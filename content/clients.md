@@ -89,7 +89,7 @@ eleventyNavigation:
 * Dr. Corey Kirshner
 * Dianne Morris Jones
 * _Diabetic Living_ magazine
-* _DMU Magazine_
+* _DMU Magazine_$$
 * Ilya Kaminsky
 * J. Barry Griswell _&_ Bob Jennings
 * John Foxjohn
@@ -103,6 +103,7 @@ eleventyNavigation:
 * Mary Stier
 * Dr. Michael Miller
 * Morra Aarons-Mele
+* Muriel Maignan Wilkins
 * Phil Karber
 * Rebecca Johns
 * Rodale Books
