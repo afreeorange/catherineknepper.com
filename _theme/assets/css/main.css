@@ -10,6 +10,8 @@
 
   --color-secondary: #78cce3;
   --color-tertiary: #024668;
+
+  --transition-delay: 0.25s;
 }
 
 ::selection {
@@ -68,6 +70,7 @@ header {
 
 main {
   font-family: "Noe Text";
+  animation: fadeIn var(--transition-delay) ease-in-out;
   @apply my-4;
 
   h2,
@@ -108,8 +111,10 @@ body.home {
 }
 
 body.about {
+  background: url(/assets/img/catherine-about.jpg) top right no-repeat;
+  @apply bg-cover;
+
   main {
-    background: url(/assets/img/catherine-about.jpg) top right no-repeat;
     background-size: cover;
 
     .content {
@@ -136,8 +141,8 @@ body.services {
       }
 
       h3 {
-        @apply text-2xl font-bold mt-12 text-center;
-        color: var(--color-highlight-light);
+        @apply text-2xl font-bold mt-8 text-center border-t border-dotted pt-8;
+        border-color: var(--color-tertiary);
       }
 
       h3 + p {
@@ -146,7 +151,7 @@ body.services {
 
       h4 {
         @apply text-xl mb-4 text-center italic;
-        color: #fc0;
+        color: var(--color-secondary);
       }
 
       p {
@@ -159,7 +164,7 @@ body.services {
 
       mark {
         @apply bg-transparent text-white;
-        color: var(--color-secondary);
+        color: var(--color-highlight-light);
       }
     }
   }
@@ -171,18 +176,18 @@ body.testimonials {
       @apply mx-auto p-4 max-w-xl;
 
       h2 {
-        @apply text-4xl font-bold mb-12 text-center;
         color: var(--color-highlight);
+        @apply text-4xl font-bold mb-12 text-center;
       }
 
       blockquote {
-        @apply pl-4 border-l;
         border-left-color: var(--color-tertiary);
+        @apply pl-4 border-l;
       }
 
       blockquote + p {
-        @apply mb-8 mt-2 text-sm ml-8 relative;
         color: var(--color-secondary);
+        @apply mb-12 mt-2 text-sm ml-8 relative;
       }
 
       blockquote + p::before {
@@ -191,8 +196,8 @@ body.testimonials {
       }
 
       blockquote + p a {
-        @apply underline underline-offset-2 decoration-1;
         text-decoration-color: var(--color-secondary);
+        @apply underline underline-offset-2 decoration-1;
 
         &:hover {
           @apply text-white decoration-white;
@@ -202,6 +207,49 @@ body.testimonials {
       blockquote + p:last-child {
         @apply mb-0;
       }
+    }
+  }
+}
+
+body.clients {
+  main {
+    .content {
+      @apply p-4;
+
+      h2 {
+        @apply text-4xl font-bold mb-4 text-center;
+        color: var(--color-highlight);
+      }
+
+      h3 {
+        @apply text-2xl font-bold mt-4 text-center;
+      }
+
+      > div > ul {
+        @apply md:columns-2 lg:columns-3 gap-12 mt-8;
+        column-rule: 1px dotted var(--color-tertiary);
+
+        li:not(:last-of-type) {
+          @apply mb-2;
+        }
+      }
+
+      .publishers {
+        @apply hidden;
+      }
+
+      /* .publishers ul {
+        @apply overflow-x-auto;
+      }
+      .publishers ul li {
+      }
+      .publishers ul li a img {
+        filter: invert(1) saturate(0);
+        @apply opacity-25 w-auto h-[200px];
+      }
+      .publishers ul li a img:hover {
+        @apply opacity-100;
+      } */
     }
   }
 }
