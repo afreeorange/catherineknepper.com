@@ -8,19 +8,11 @@ eleventyNavigation:
   order: 6
 ---
 
-### Ready to discuss your project? Please reach out and I'll get in touch with you soon!
+### Ready to discuss your project? <br /> Please reach out and I'll get in touch with you soon!
 
 <form name="contact" method="POST" data-netlify="true">
-  <p>
-    <label><span>Your Name</span> <input type="text" name="name" /></label>
-  </p>
-  <p>
-    <label><span>Your Email</span> <input type="email" name="email" /></label>
-  </p>
-  <p>
-    <label><span>Message</span> <textarea name="message"></textarea></label>
-  </p>
-  <p>
-    <button type="submit">Send</button>
-  </p>
+  <input type="text" name="name" placeholder="Name" />
+  <input type="email" name="email" placeholder="Email" />
+  <textarea name="message" placeholder="Message"></textarea>
+  <button type="submit">Send</button>
 </form>

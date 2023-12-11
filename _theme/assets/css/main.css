@@ -91,7 +91,7 @@ main {
 
 body.home {
   .content {
-    @apply mx-auto p-4 max-w-xl;
+    @apply mx-auto p-4 max-w-2xl;
   }
 
   main {
@@ -183,7 +183,7 @@ body.about {
 body.services {
   main {
     .content {
-      @apply mx-auto p-4 max-w-xl;
+      @apply mx-auto p-4 max-w-2xl;
 
       > div > p:first-of-type {
         @apply text-xl;
@@ -205,7 +205,8 @@ body.services {
       }
 
       h4 {
-        @apply text-xl mb-4 text-center opacity-50;
+        @apply text-xl mb-4 text-center;
+        color: var(--color-highlight-light);
       }
 
       p {
@@ -227,7 +228,7 @@ body.services {
 body.testimonials {
   main {
     .content {
-      @apply mx-auto p-4 max-w-xl;
+      @apply mx-auto p-4 max-w-2xl;
 
       h2 {
         color: var(--color-highlight);
@@ -236,10 +237,11 @@ body.testimonials {
 
       blockquote {
         border-left-color: var(--color-tertiary);
-        @apply pl-4 border-l;
+        @apply pl-4 border-l border-dotted;
       }
 
       blockquote + p {
+        font-family: "Noe Display";
         color: var(--color-secondary);
         @apply mb-12 mt-2 text-sm ml-8 relative;
       }
@@ -251,7 +253,7 @@ body.testimonials {
 
       blockquote + p a {
         text-decoration-color: var(--color-secondary);
-        @apply underline underline-offset-2 decoration-1;
+        @apply underline underline-offset-2 decoration-0;
 
         &:hover {
           @apply text-white decoration-white;
@@ -325,54 +327,48 @@ body.clients {
 body.contact {
   main {
     .content {
-      @apply mx-auto p-4 max-w-xl;
+      @apply mx-auto p-4 max-w-2xl;
 
       h2 {
-        @apply text-4xl font-bold mb-4 text-center;
+        @apply text-4xl mb-4 font-bold text-center;
         color: var(--color-highlight);
       }
 
       h3 {
-        @apply text-2xl mt-4 text-center;
-        color: var(--color-highlight-light);
+        @apply text-2xl  text-center;
       }
     }
 
-    form[name="contact"] button[type="submit"] {
-      @apply w-full text-2xl italic py-2 rounded-md;
-      background-color: var(--color-highlight-primary);
+    form {
+      @apply mt-8;
+
+      * {
+        background-color: var(--color-background);
+        border-color: var(--color-tertiary);
+      }
     }
 
-    form[name="contact"] label {
+    form input,
+    form textarea {
+      @apply rounded-md border p-2 text-white w-full mb-4;
     }
 
-    form[name="contact"] label span {
+    form textarea {
+      @apply h-64;
     }
 
-    form[name="contact"] label input,
-    form[name="contact"] label textarea,
-    form[name="contact"] button[type="submit"] {
+    form input::placeholder,
+    form textarea::placeholder {
+      color: var(--color-tertiary);
     }
 
-    form[name="contact"] label textarea {
+    form button[type="submit"] {
+      @apply w-full text-2xl italic py-2 rounded-md border;
     }
 
-    form[name="contact"] p:last-child {
-    }
-
-    form[name="contact"] p:last-child button[type="submit"] {
-      /* width: 100%;
-      font-size: 1.75em;
-      font-style: italic;
-      padding: 0.25em;
-      background-color: var(--color-highlight-primary);
-      transition: background-color var(--transition-delay);
-      cursor: pointer;
-      border: 0; */
-    }
-
-    form[name="contact"] button[type="submit"]:hover {
+    form button[type="submit"]:hover {
       background: var(--color-highlight);
+      border-color: var(--color-highlight);
     }
   }
 }
