@@ -1,5 +1,5 @@
 - [ ] Markdown quotes
-- [ ] Contact
+- [x] Contact
 - [ ] Fonts convert
 - [ ] Consistency
 - [ ] CSS edits

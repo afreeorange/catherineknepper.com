@@ -91,7 +91,7 @@ main {
 
 body.home {
   .content {
-    @apply mx-auto p-4 max-w-2xl;
+    @apply mx-auto p-4 max-w-3xl;
   }
 
   main {
@@ -110,10 +110,43 @@ body.home {
       }
 
       p:nth-of-type(1) {
-        @apply text-3xl font-bold;
+        @apply text-5xl font-bold;
         font-family: "Noe Display";
 
         color: var(--color-highlight-light);
+      }
+
+      p {
+        @apply text-2xl;
+      }
+    }
+
+    .books {
+      @apply mt-8 pt-8 border-t border-dotted text-center;
+      border-color: var(--color-tertiary);
+
+      .cover {
+        @apply relative w-[10em] rounded-xl inline-block mr-4 mb-4;
+        box-shadow: 0 0 5px -1px #101010;
+        transition: all 0.2s;
+
+        /* This adds the 'hardcover' effect */
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 4px;
+          bottom: 0;
+          width: 3px;
+          background: rgba(0, 0, 0, 0.06);
+          box-shadow: 1px 0 3px rgba(255, 255, 255, 0.7);
+        }
+
+        &:hover {
+          transform: scale(1.05);
+          cursor: pointer;
+          box-shadow: 0 0 15px 1px #666;
+        }
       }
     }
   }
@@ -183,7 +216,7 @@ body.about {
 body.services {
   main {
     .content {
-      @apply mx-auto p-4 max-w-2xl;
+      @apply mx-auto p-4 max-w-3xl;
 
       > div > p:first-of-type {
         @apply text-xl;
@@ -228,7 +261,7 @@ body.services {
 body.testimonials {
   main {
     .content {
-      @apply mx-auto p-4 max-w-2xl;
+      @apply mx-auto p-4 max-w-3xl;
 
       h2 {
         color: var(--color-highlight);
@@ -306,18 +339,22 @@ body.clients {
         ul {
           @apply whitespace-nowrap;
           animation: 30s slide infinite linear;
-        }
 
-        ul li {
-          @apply inline-block mr-24;
+          &:hover {
+            animation-play-state: paused;
+          }
+
+          li {
+            @apply inline-block mr-24;
+          }
         }
 
         img {
-          @apply opacity-60 w-auto h-24 invert;
-        }
+          @apply opacity-30 w-auto h-24 invert;
 
-        img:hover {
-          @apply opacity-100;
+          &:hover {
+            @apply opacity-100;
+          }
         }
       }
     }
@@ -327,7 +364,7 @@ body.clients {
 body.contact {
   main {
     .content {
-      @apply mx-auto p-4 max-w-2xl;
+      @apply mx-auto p-4 max-w-3xl;
 
       h2 {
         @apply text-4xl mb-4 font-bold text-center;

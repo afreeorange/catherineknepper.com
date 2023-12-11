@@ -23,7 +23,12 @@ const Shell = ({
 }) => (
   <html lang="en-US">
     <head>
-      <title>{data.title} &ndash; Catherine Knepper</title>
+      {data.title ? (
+        <title>{data.title} &ndash; Catherine Knepper</title>
+      ) : (
+        <title>Catherine Knepper</title>
+      )}
+
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 
