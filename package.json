@@ -1,0 +1,35 @@
+{
+  "name": "cat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf _site",
+    "dev": "pnpm start",
+    "dev:css": "npx postcss ./_theme/assets/css/main.css -o ./_site/assets/css/bundle.css --watch --verbose",
+    "dev:server": "node --require esbuild-register ./node_modules/.bin/eleventy --config=.eleventy.ts --watch --serve",
+    "format": "npx prettier **/*.ts* --write",
+    "start": "run-p dev:*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-navigation": "^0.3.5",
+    "@tailwindcss/nesting": "0.0.0-insiders.565cd3e",
+    "@types/node": "^20.10.4",
+    "autoprefixer": "^10.4.16",
+    "cssnano": "^6.0.1",
+    "esbuild": "^0.19.9",
+    "esbuild-register": "^3.5.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.32",
+    "postcss-cli": "^11.0.0",
+    "postcss-import": "^15.1.0",
+    "preact": "^10.19.3",
+    "preact-render-to-string": "^6.3.1",
+    "prettier": "^3.1.1",
+    "tailwindcss": "^3.3.6"
+  }
+}

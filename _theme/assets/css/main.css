@@ -1,0 +1,274 @@
+@import "./tailwind.css";
+@import "./fonts.css";
+
+:root {
+  --color-background: #080f4f;
+  --color-highlight-primary: #f30;
+  --color-highlight: #f60;
+  --color-highlight-light: #f90;
+  --color-text: #fff;
+
+  --color-secondary: #78cce3;
+  --color-tertiary: #024668;
+}
+
+::selection {
+  background: var(--color-highlight-primary);
+  color: var(--color-text);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+html,
+body {
+  @apply max-w-full overflow-x-hidden scroll-smooth transition-all;
+  background: var(--color-background);
+  color: white;
+  font-size: 18px;
+  font-family: "Noe Text";
+}
+
+header {
+  @apply text-sm flex px-8 py-6;
+
+  *:hover {
+    @apply shadow-lg transition-all;
+    color: var(--color-highlight);
+  }
+
+  h1 {
+    @apply flex-1 font-bold uppercase;
+  }
+
+  ul {
+    @apply flex gap-4;
+
+    li:not(:last-of-type)::after {
+      content: "/";
+      color: var(--color-tertiary);
+      @apply ml-4;
+    }
+
+    li:hover a {
+      color: var(--color-highlight-light);
+    }
+
+    li.active a {
+      color: var(--color-highlight);
+    }
+  }
+}
+
+main {
+  font-family: "Noe Text";
+  @apply my-4;
+
+  h2,
+  h3,
+  h4 {
+    font-family: "Noe Display";
+  }
+}
+
+body.home {
+  .content {
+    @apply mx-auto p-4 max-w-xl;
+  }
+
+  main {
+    background-color: #080f4f;
+    opacity: 1;
+    background-image: radial-gradient(#024668 0.4px, transparent 0.4px),
+      radial-gradient(#024668 0.4px, #080f4f 0.4px);
+    background-size: 16px 16px;
+    background-position:
+      0 0,
+      8px 8px;
+
+    .content {
+      p:not(:last-of-type) {
+        @apply mb-6;
+      }
+
+      p:nth-of-type(1) {
+        @apply text-3xl font-bold;
+        font-family: "Noe Display";
+
+        color: var(--color-highlight-light);
+      }
+    }
+  }
+}
+
+body.about {
+  main {
+    background: url(/assets/img/catherine-about.jpg) top right no-repeat;
+    background-size: cover;
+
+    .content {
+      h2 {
+        @apply text-3xl font-bold;
+        color: var(--color-highlight-light);
+      }
+
+      h3 {
+        @apply text-xl italic;
+      }
+    }
+  }
+}
+
+body.services {
+  main {
+    .content {
+      @apply mx-auto p-4 max-w-xl;
+
+      h2 {
+        @apply text-4xl font-bold mb-12 text-center;
+        color: var(--color-highlight);
+      }
+
+      h3 {
+        @apply text-2xl font-bold mt-12 text-center;
+        color: var(--color-highlight-light);
+      }
+
+      h3 + p {
+        @apply mt-6;
+      }
+
+      h4 {
+        @apply text-xl mb-4 text-center italic;
+        color: #fc0;
+      }
+
+      p {
+        @apply mb-6;
+      }
+
+      ul {
+        @apply list-disc my-6 space-y-3;
+      }
+
+      mark {
+        @apply bg-transparent text-white;
+        color: var(--color-secondary);
+      }
+    }
+  }
+}
+
+body.testimonials {
+  main {
+    .content {
+      @apply mx-auto p-4 max-w-xl;
+
+      h2 {
+        @apply text-4xl font-bold mb-12 text-center;
+        color: var(--color-highlight);
+      }
+
+      blockquote {
+        @apply pl-4 border-l;
+        border-left-color: var(--color-tertiary);
+      }
+
+      blockquote + p {
+        @apply mb-8 mt-2 text-sm ml-8 relative;
+        color: var(--color-secondary);
+      }
+
+      blockquote + p::before {
+        content: "\2013";
+        @apply absolute -left-4;
+      }
+
+      blockquote + p a {
+        @apply underline underline-offset-2 decoration-1;
+        text-decoration-color: var(--color-secondary);
+
+        &:hover {
+          @apply text-white decoration-white;
+        }
+      }
+
+      blockquote + p:last-child {
+        @apply mb-0;
+      }
+    }
+  }
+}
+
+body.contact {
+  main {
+    .content {
+      h2 {
+        @apply text-4xl font-bold mb-4 text-center;
+        color: var(--color-highlight);
+      }
+
+      h3 {
+        @apply text-2xl font-bold mt-4 text-center;
+        /* color: var(--color-highlight-light); */
+      }
+    }
+
+    form[name="contact"] label {
+    }
+
+    form[name="contact"] label span {
+    }
+
+    form[name="contact"] label input,
+    form[name="contact"] label textarea,
+    form[name="contact"] button[type="submit"] {
+    }
+
+    form[name="contact"] label textarea {
+    }
+
+    form[name="contact"] p:last-child {
+    }
+
+    form[name="contact"] p:last-child button[type="submit"] {
+      width: 100%;
+      font-size: 1.75em;
+      font-style: italic;
+      padding: 0.25em;
+      background-color: var(--color-highlight-primary);
+      transition: background-color var(--transition-delay);
+      cursor: pointer;
+      border: 0;
+    }
+
+    form[name="contact"] p:last-child button[type="submit"]:hover {
+      background-color: var(--color-highlight-secondary);
+    }
+  }
+}
+
+footer {
+  font-family: "Noe Display";
+  color: var(--color-tertiary);
+  @apply text-xs p-4 mb-8;
+
+  p {
+    @apply ml-3 block w-fit;
+    margin: 0 auto;
+
+    span {
+      @apply -ml-3;
+    }
+  }
+
+  a {
+    @apply underline underline-offset-2 hover:text-white;
+  }
+}
