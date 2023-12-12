@@ -23,4 +23,22 @@ The work we've done together has been published by Berkley Books, Bloomsbury, _T
   <div class="cover"><img src="/assets/img/books/wholebody.jpeg" /></div>
   <div class="cover"><img src="/assets/img/books/eat.jpeg" /></div>
   <div class="cover"><img src="/assets/img/books/heal.jpeg" /></div>
+
+  <div class="cover"><img src="/assets/img/books/adversity.jpeg" /></div>
+  <div class="cover"><img src="/assets/img/books/beach.jpeg" /></div>
+  <div class="cover"><img src="/assets/img/books/bluebox.jpeg" /></div>
+  <div class="cover"><img src="/assets/img/books/cloud.jpeg" /></div>
+  <div class="cover"><img src="/assets/img/books/death.jpeg" /></div>
+  <div class="cover"><img src="/assets/img/books/dome.jpeg" /></div>
+  <div class="cover"><img src="/assets/img/books/fearfaith.jpeg" /></div>
+  <div class="cover"><img src="/assets/img/books/fun.jpeg" /></div>
+  <div class="cover"><img src="/assets/img/books/grammar.jpeg" /></div>
+  <div class="cover"><img src="/assets/img/books/memory.jpeg" /></div>
+  <div class="cover"><img src="/assets/img/books/paris.jpeg" /></div>
+  <div class="cover"><img src="/assets/img/books/skytrain.jpeg" /></div>
+  <div class="cover"><img src="/assets/img/books/sleepwalker.jpeg" /></div>
+  <div class="cover"><img src="/assets/img/books/spirit.jpeg" /></div>
+  <div class="cover"><img src="/assets/img/books/stop.jpeg" /></div>
+  <div class="cover"><img src="/assets/img/books/superhuman.jpeg" /></div>
+  <div class="cover"><img src="/assets/img/books/unblocked.jpeg" /></div>
 </div>

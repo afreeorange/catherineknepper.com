@@ -1,9 +1,15 @@
+const markdownIt = require("markdown-it");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
-module.exports = (eleventyConfig: any) => {
+module.exports = (eleventyConfig) => {
   eleventyConfig.addExtension(["layout.tsx", "page.tsx", "json.tsx"], {
     key: "11ty.js",
   });
+
+  eleventyConfig.setLibrary("md", markdownIt({
+    html: true,
+    typographer: true,
+  }));
 
   eleventyConfig.addWatchTarget("./_site/assets/css/*.css");
   eleventyConfig.addWatchTarget("./_theme/**/*.tsx");

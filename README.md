@@ -1,9 +1,13 @@
-- [ ] Markdown quotes
-- [x] Contact
-- [ ] Fonts convert
+- [ ] Book Carousel
+  - [ ] Book Metadata
 - [ ] Consistency
 - [ ] CSS edits
-- [ ] One page?
-- [ ] Responsive
+- [ ] Fonts convert
+- [ ] One page
 - [ ] README
-
+- [ ] Responsive
+- [x] Sitemap
+- [x] Robots
+- [x] Humans
+- [x] Contact
+- [x] Markdown quotes
