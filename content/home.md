@@ -41,4 +41,19 @@ The work we've done together has been published by Berkley Books, Bloomsbury, _T
   <div class="cover"><img src="/assets/img/books/stop.jpeg" /></div>
   <div class="cover"><img src="/assets/img/books/superhuman.jpeg" /></div>
   <div class="cover"><img src="/assets/img/books/unblocked.jpeg" /></div>
+
+  <div class="cover"><img src="/assets/img/books/adaosdance.jpeg" /></div>
+  <div class="cover"><img src="/assets/img/books/coaching.jpeg" /></div>
+  <div class="cover"><img src="/assets/img/books/coaching-workbook.jpeg" /></div>
+  <div class="cover"><img src="/assets/img/books/consumption.jpeg" /></div>
+  <div class="cover"><img src="/assets/img/books/countess.jpeg" /></div>
+  <div class="cover"><img src="/assets/img/books/deceived.jpeg" /></div>
+  <div class="cover"><img src="/assets/img/books/dontknow.jpeg" /></div>
+  <div class="cover"><img src="/assets/img/books/fitting.jpeg" /></div>
+  <div class="cover"><img src="/assets/img/books/leader.jpeg" /></div>
+  <div class="cover"><img src="/assets/img/books/mars.jpeg" /></div>
+  <div class="cover"><img src="/assets/img/books/miscarriage.jpeg" /></div>
+  <div class="cover"><img src="/assets/img/books/parthenon.jpeg" /></div>
+  <div class="cover"><img src="/assets/img/books/queenbreaker.jpeg" /></div>
+  <div class="cover"><img src="/assets/img/books/timberhill.jpeg" /></div>
 </div>
