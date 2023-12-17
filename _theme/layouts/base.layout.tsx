@@ -49,6 +49,7 @@ const Shell = ({
 
       <link rel="stylesheet" href="/assets/css/bundle.css" />
 
+      <script src="/assets/js/tabs.js"></script>
       <script
         async
         defer

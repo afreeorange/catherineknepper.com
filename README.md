@@ -11,3 +11,7 @@
 - [x] Humans
 - [x] Contact
 - [x] Markdown quotes
+- [ ] Collaborative Work
+- [ ] Edited Work
+- [ ] Colophon
+- [ ] Transitions

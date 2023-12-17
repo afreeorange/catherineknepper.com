@@ -6,10 +6,13 @@ module.exports = (eleventyConfig) => {
     key: "11ty.js",
   });
 
-  eleventyConfig.setLibrary("md", markdownIt({
-    html: true,
-    typographer: true,
-  }));
+  eleventyConfig.setLibrary(
+    "md",
+    markdownIt({
+      html: true,
+      typographer: true,
+    }),
+  );
 
   eleventyConfig.addWatchTarget("./_site/assets/css/*.css");
   eleventyConfig.addWatchTarget("./_theme/**/*.tsx");
@@ -17,7 +20,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
   eleventyConfig.addCollection((api) =>
-    api.getFilteredByGlob(`content/**/*.md`)
+    api.getFilteredByGlob(`content/**/*.md`),
   );
 
   eleventyConfig.ignores.add("README.md");

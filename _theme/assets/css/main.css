@@ -3,6 +3,7 @@
 
 :root {
   --color-background: #080f4f;
+  --color-background-dark: #00042b;
   --color-highlight-primary: #f30;
   --color-highlight: #f60;
   --color-highlight-light: #f90;
@@ -39,14 +40,14 @@
 
 html,
 body {
-  @apply max-w-full overflow-x-hidden scroll-smooth transition-all duration-300 text-white;
+  @apply max-w-full overflow-x-hidden scroll-smooth text-white;
   background: var(--color-background);
   font-size: 18px;
   font-family: "Noe Text";
 }
 
 header {
-  @apply text-base flex px-8 py-6;
+  @apply flex px-8 py-6 text-base;
   font-family: "Noe Display";
 
   *:hover {
@@ -55,7 +56,7 @@ header {
   }
 
   h1 {
-    @apply flex-1 font-bold uppercase;
+    @apply flex-grow font-bold uppercase;
   }
 
   ul {
@@ -89,6 +90,68 @@ main {
   }
 }
 
+.cover {
+  @apply relative inline-block w-[10em];
+  box-shadow: 0 0 5px -1px #000;
+  transition: all 0.2s;
+
+  img {
+    @apply rounded-l-sm rounded-r-md;
+  }
+
+  /* This adds the 'hardcover' effect */
+  &::after {
+    content: "";
+    @apply absolute bottom-0 left-[5px] top-0;
+    left: 5px;
+    width: 2%;
+    background: rgba(0, 0, 0, 0.06);
+    box-shadow: 1px 0 8px rgba(255, 255, 255, 1);
+  }
+
+  &:hover {
+    @apply drop-shadow-lg;
+    transform: scale(1.05);
+    cursor: pointer;
+    /* box-shadow: 0 0 15px 1px #111; */
+  }
+}
+
+.work-tabs {
+  @apply mt-8;
+
+  div[role="tablist"] {
+    @apply -ml-8 space-x-8  text-center;
+    border-color: var(--color-tertiary);
+
+    button {
+      &[role="tab"] {
+        @apply -mb-0.5 rounded-t-md px-4 pt-1 italic;
+        background: var(--color-background);
+        border-color: var(--color-tertiary);
+      }
+
+      &[aria-selected="true"] {
+        color: var(--color-highlight);
+        background: var(--color-background-dark);
+      }
+
+      &[aria-selected="false"] {
+        @apply border border-b-0;
+        color: var(--color-tertiary);
+      }
+    }
+  }
+
+  div[role="tabpanel"] {
+    background: var(--color-background-dark);
+  }
+
+  .books {
+    @apply scrollbar-thin scrollbar-thumb-blue-700 scrollbar-track-blue-950 h-80 space-x-8 overflow-x-scroll whitespace-nowrap px-8 py-4;
+  }
+}
+
 body.home {
   main {
     background-color: #080f4f;
@@ -101,7 +164,7 @@ body.home {
       8px 8px;
 
     .hello {
-      @apply mx-auto p-4 max-w-3xl;
+      @apply mx-auto max-w-3xl p-4;
 
       p {
         @apply text-xl;
@@ -118,30 +181,6 @@ body.home {
         @apply mb-6;
       }
     }
-
-    .cover {
-      @apply relative w-[10em] rounded-xl inline-block mr-4 mb-4;
-      box-shadow: 0 0 5px -1px #101010;
-      transition: all 0.2s;
-
-      /* This adds the 'hardcover' effect */
-      &::after {
-        content: "";
-        @apply absolute top-0 left-[5px] bottom-0;
-        left: 5px;
-        width: 2%;
-        background: rgba(0, 0, 0, 0.06);
-        box-shadow: 1px 0 8px rgba(255, 255, 255, 1);
-      }
-
-      &:hover {
-        @apply drop-shadow-lg;
-        transform: scale(1.05);
-        cursor: pointer;
-        /* box-shadow: 0 0 15px 1px #111; */
-      }
-    }
-
   }
 }
 
@@ -163,7 +202,7 @@ body.about {
     background-size: cover;
 
     .content {
-      @apply px-8 w-[65%];
+      @apply w-[65%] px-8;
 
       h2 {
         @apply text-4xl font-bold;
@@ -171,7 +210,7 @@ body.about {
       }
 
       h3 {
-        @apply text-2xl mb-6;
+        @apply mb-6 text-2xl;
         color: var(--color-highlight-light);
       }
 
@@ -180,7 +219,7 @@ body.about {
       }
 
       a {
-        @apply underline underline-offset-[3px] decoration-0;
+        @apply underline decoration-0 underline-offset-[3px];
       }
 
       a:hover {
@@ -209,19 +248,19 @@ body.about {
 body.services {
   main {
     .content {
-      @apply mx-auto p-4 max-w-3xl;
+      @apply mx-auto max-w-3xl p-4;
 
       > div > p:first-of-type {
         @apply text-xl;
       }
 
       h2 {
-        @apply text-4xl font-bold mb-12 text-center;
+        @apply mb-12 text-center text-4xl font-bold;
         color: var(--color-highlight);
       }
 
       h3 {
-        @apply text-2xl font-bold mt-8 text-center border-t border-dotted pt-8;
+        @apply mt-8 border-t border-dotted pt-8 text-center text-2xl font-bold;
         border-color: var(--color-tertiary);
         color: var(--color-highlight-light);
       }
@@ -231,7 +270,7 @@ body.services {
       }
 
       h4 {
-        @apply text-xl mb-4 text-center;
+        @apply mb-4 text-center text-xl;
         color: var(--color-highlight-light);
       }
 
@@ -240,7 +279,7 @@ body.services {
       }
 
       ul {
-        @apply list-disc my-6 space-y-3;
+        @apply my-6 list-disc space-y-3;
       }
 
       mark {
@@ -254,22 +293,22 @@ body.services {
 body.testimonials {
   main {
     .content {
-      @apply mx-auto p-4 max-w-3xl;
+      @apply mx-auto max-w-3xl p-4;
 
       h2 {
         color: var(--color-highlight);
-        @apply text-4xl font-bold mb-12 text-center;
+        @apply mb-12 text-center text-4xl font-bold;
       }
 
       blockquote {
         border-left-color: var(--color-tertiary);
-        @apply pl-4 border-l border-dotted;
+        @apply border-l border-dotted pl-4;
       }
 
       blockquote + p {
         font-family: "Noe Display";
         color: var(--color-secondary);
-        @apply mb-12 mt-2 text-base ml-8 relative;
+        @apply relative mb-12 ml-8 mt-2 text-base;
       }
 
       blockquote + p::before {
@@ -279,7 +318,7 @@ body.testimonials {
 
       blockquote + p a {
         text-decoration-color: var(--color-secondary);
-        @apply underline underline-offset-2 decoration-0;
+        @apply underline decoration-0 underline-offset-2;
 
         &:hover {
           @apply text-white decoration-white;
@@ -303,17 +342,17 @@ body.clients {
       @apply p-4;
 
       h2 {
-        @apply text-4xl font-bold mb-4 text-center;
+        @apply mb-4 text-center text-4xl font-bold;
         color: var(--color-highlight);
       }
 
       h3 {
-        @apply text-2xl font-bold mt-4 text-center;
+        @apply mt-4 text-center text-2xl font-bold;
         color: var(--color-highlight-light);
       }
 
       > div > ul {
-        @apply md:columns-2 lg:columns-3 gap-12 mt-8 text-center;
+        @apply mt-8 gap-12 text-center md:columns-2 lg:columns-3;
         column-rule: 1px dotted var(--color-tertiary);
 
         li:not(:last-of-type) {
@@ -342,12 +381,12 @@ body.clients {
           }
 
           li {
-            @apply inline-block mr-24;
+            @apply mr-24 inline-block;
           }
         }
 
         img {
-          @apply opacity-30 w-auto h-24 invert;
+          @apply h-24 w-auto opacity-30 invert;
 
           &:hover {
             @apply opacity-100;
@@ -361,15 +400,15 @@ body.clients {
 body.contact {
   main {
     .content {
-      @apply mx-auto p-4 max-w-3xl;
+      @apply mx-auto max-w-3xl p-4;
 
       h2 {
-        @apply text-4xl mb-4 font-bold text-center;
+        @apply mb-4 text-center text-4xl font-bold;
         color: var(--color-highlight);
       }
 
       h3 {
-        @apply text-2xl  text-center;
+        @apply text-center  text-2xl;
       }
     }
 
@@ -384,7 +423,7 @@ body.contact {
 
     form input,
     form textarea {
-      @apply rounded-md border p-2 text-white w-full mb-4;
+      @apply mb-4 w-full rounded-md border p-2 text-white;
     }
 
     form textarea {
@@ -397,16 +436,17 @@ body.contact {
     }
 
     form button[type="submit"] {
-      @apply w-full text-2xl italic py-2 rounded-md border;
+      @apply w-full rounded-md border py-2 text-2xl italic;
 
       svg {
-        @apply inline-block stroke-1 w-4 ml-2;
+        @apply ml-2 inline-block w-4 stroke-1;
         background: var(--color-background);
         fill: var(--color-highlight);
       }
     }
 
     form button[type="submit"]:hover {
+      @apply transition-all duration-300;
       background: var(--color-highlight);
       border-color: var(--color-highlight);
 
@@ -421,7 +461,7 @@ body.contact {
 footer {
   font-family: "Noe Display";
   color: var(--color-tertiary);
-  @apply text-xs p-4 mb-8;
+  @apply mb-8 p-4 text-xs;
 
   p {
     @apply ml-3 block w-fit;
