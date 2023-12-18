@@ -3,9 +3,9 @@ title: null
 permalink: /
 stub: home
 
-# eleventyNavigation:
-#   key: Home
-#   order: 1
+eleventyNavigation:
+  key: Home
+  order: 0
 ---
 
 <div class="hello">

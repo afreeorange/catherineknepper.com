@@ -1,20 +1,6 @@
 @import "./tailwind.css";
 @import "./fonts.css";
 
-:root {
-  --color-background: #080f4f;
-  --color-background-dark: #00042b;
-  --color-highlight-primary: #f30;
-  --color-highlight: #f60;
-  --color-highlight-light: #f90;
-  --color-text: #fff;
-
-  --color-secondary: #78cce3;
-  --color-tertiary: #005b89;
-
-  --transition-delay: 0.25s;
-}
-
 ::selection {
   background: var(--color-highlight-primary);
   color: var(--color-text);
@@ -40,8 +26,7 @@
 
 html,
 body {
-  @apply max-w-full overflow-x-hidden scroll-smooth text-white;
-  background: var(--color-background);
+  @apply max-w-full overflow-x-hidden scroll-smooth bg-background text-white;
   font-size: 18px;
   font-family: "Noe Text";
 }
@@ -51,8 +36,7 @@ header {
   font-family: "Noe Display";
 
   *:hover {
-    @apply shadow-lg transition-all;
-    color: var(--color-highlight);
+    @apply text-highlight shadow-lg transition-all;
   }
 
   h1 {
@@ -64,16 +48,15 @@ header {
 
     li:not(:last-of-type)::after {
       content: "/";
-      color: var(--color-tertiary);
-      @apply ml-4;
+      @apply ml-4 text-tertiary;
     }
 
     li:hover a {
-      color: var(--color-highlight-light);
+      @apply text-highlightLight;
     }
 
     li.active a {
-      color: var(--color-highlight);
+      @apply text-highlight;
     }
   }
 }
@@ -91,8 +74,7 @@ main {
 }
 
 .cover {
-  @apply relative inline-block w-[10em];
-  box-shadow: 0 0 5px -1px #000;
+  @apply relative inline-block w-[10em] shadow-lg shadow-black;
   transition: all 0.2s;
 
   img {
@@ -113,42 +95,38 @@ main {
     @apply drop-shadow-lg;
     transform: scale(1.05);
     cursor: pointer;
-    /* box-shadow: 0 0 15px 1px #111; */
   }
 }
 
 .work-tabs {
-  @apply mt-8;
+  @apply mt-4;
 
   div[role="tablist"] {
-    @apply -ml-8 space-x-8  text-center;
-    border-color: var(--color-tertiary);
+    @apply mx-auto max-w-3xl space-x-6;
 
     button {
       &[role="tab"] {
-        @apply -mb-0.5 rounded-t-md px-4 pt-1 italic;
-        background: var(--color-background);
-        border-color: var(--color-tertiary);
+        @apply rounded-t-md bg-background px-4 pt-1 text-xl transition duration-300  hover:text-white;
+        font-family: "Noe Display";
       }
 
       &[aria-selected="true"] {
-        color: var(--color-highlight);
-        background: var(--color-background-dark);
+        @apply z-10 cursor-not-allowed border border-b-0 border-highlight bg-highlight text-black;
       }
 
       &[aria-selected="false"] {
-        @apply border border-b-0;
-        color: var(--color-tertiary);
+        @apply border border-b-0 border-tertiary bg-backgroundDark text-secondary;
       }
     }
   }
 
   div[role="tabpanel"] {
-    background: var(--color-background-dark);
+    @apply border-t border-highlight bg-backgroundDark;
   }
 
   .books {
-    @apply scrollbar-thin scrollbar-thumb-blue-700 scrollbar-track-blue-950 h-80 space-x-8 overflow-x-scroll whitespace-nowrap px-8 py-4;
+    @apply h-[19rem] space-x-8 overflow-x-scroll whitespace-nowrap px-8 py-4 scrollbar-thin scrollbar-track-blue-950;
+    --scrollbar-thumb: var(--color-highlight);
   }
 }
 
@@ -171,10 +149,8 @@ body.home {
       }
 
       p:nth-of-type(1) {
-        @apply text-4xl font-bold;
+        @apply text-4xl font-bold text-highlight;
         font-family: "Noe Display";
-
-        color: var(--color-highlight);
       }
 
       p:not(:last-of-type) {
@@ -205,13 +181,11 @@ body.about {
       @apply w-[65%] px-8;
 
       h2 {
-        @apply text-4xl font-bold;
-        color: var(--color-highlight);
+        @apply text-4xl font-bold text-highlight;
       }
 
       h3 {
-        @apply mb-6 text-2xl;
-        color: var(--color-highlight-light);
+        @apply mb-6 text-2xl text-highlightLight;
       }
 
       p:not(:last-of-type) {
@@ -223,7 +197,7 @@ body.about {
       }
 
       a:hover {
-        color: var(--color-highlight-light);
+        @apply text-highlightLight;
       }
     }
   }
@@ -255,8 +229,7 @@ body.services {
       }
 
       h2 {
-        @apply mb-12 text-center text-4xl font-bold;
-        color: var(--color-highlight);
+        @apply mb-12 text-center text-4xl font-bold text-highlight;
       }
 
       h3 {
@@ -446,7 +419,6 @@ body.contact {
     }
 
     form button[type="submit"]:hover {
-      @apply transition-all duration-300;
       background: var(--color-highlight);
       border-color: var(--color-highlight);
 

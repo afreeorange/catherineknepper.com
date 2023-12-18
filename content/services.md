@@ -5,7 +5,7 @@ stub: services
 
 eleventyNavigation:
   key: Services
-  order: 3
+  order: 30
 ---
 
 I work with traditionally and independently published authors, and offer a range of customized editorial and writing services that help make your writing project a creative and commercial success. I take particular care to preserve your unique vision, voice, tone, and style. Final approval for edits is always up to you.

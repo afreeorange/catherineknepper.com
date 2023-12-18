@@ -5,7 +5,7 @@ stub: contact
 
 eleventyNavigation:
   key: Contact
-  order: 6
+  order: 60
 ---
 
 ### Ready to discuss your project? <br /> Please reach out and I'll get in touch with you soon!

@@ -5,7 +5,7 @@ stub: testimonials
 
 eleventyNavigation:
   key: Testimonials
-  order: 5
+  order: 50
 ---
 
 > Catherine served as a fabulous, much-needed second reader on my (rather long and complicated) novel, _Cloud Cuckoo Land_. She helped me tighten language, repair chronological wrinkles, clarify muddled passages, and even invent some terminology. And she served as an essential sounding board for all sorts of revision ideas. Most importantly, Catherine helped me stay confident and buoyant when I was exhausted from the work of assembling the book. I wholeheartedly recommend her services.

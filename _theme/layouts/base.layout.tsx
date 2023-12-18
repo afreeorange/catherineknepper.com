@@ -99,6 +99,8 @@ const Shell = ({
               >
                 Kathryn Gamble
               </a>{" "}
+              <br />
+              <a href="/colophon">Colophon</a>
             </>
           )}
         </p>

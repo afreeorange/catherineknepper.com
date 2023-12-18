@@ -16,3 +16,16 @@
   */
 @tailwind utilities;
 
+:root {
+  --color-background: #080f4f;
+  --color-background-dark: #00042b;
+  --color-highlight-primary: #f00;
+  --color-highlight: #f60;
+  --color-highlight-light: #f90;
+  --color-text: #fff;
+
+  --color-secondary: #78cce3;
+  --color-tertiary: #005b89;
+
+  --transition-delay: 0.25s;
+}

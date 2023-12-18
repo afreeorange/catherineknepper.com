@@ -5,7 +5,7 @@ stub: about
 
 eleventyNavigation:
   key: About
-  order: 2
+  order: 20
 ---
 
 ### Writer. Editor. Publishing Consultant.

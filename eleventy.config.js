@@ -23,6 +23,17 @@ module.exports = (eleventyConfig) => {
     api.getFilteredByGlob(`content/**/*.md`),
   );
 
+  eleventyConfig.addCollection("pagesSortedByNavigationOrder", function (api) {
+    const items = api.getAll().sort((a, b) => {
+      const left = parseInt(a.data.eleventyNavigation.order);
+      const right = parseInt(b.data.eleventyNavigation.order);
+
+      return left > right ? 1 : right > left ? -1 : 0;
+    });
+
+    return items;
+  });
+
   eleventyConfig.ignores.add("README.md");
   eleventyConfig.addPassthroughCopy({ "_theme/assets": "assets" });
 

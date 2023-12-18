@@ -5,7 +5,7 @@ stub: clients
 
 eleventyNavigation:
   key: Clients
-  order: 4
+  order: 40
 ---
 
 <div class="publishers">
