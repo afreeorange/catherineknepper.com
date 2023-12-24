@@ -1,0 +1,41 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Section from "../components/Section.astro";
+import Header from "../components/Header.astro";
+import Publishers from "../components/Publishers.astro";
+import Books from "../components/Books.astro";
+
+import * as Hello from "../content/hello.md";
+import * as About from "../content/about.md";
+import * as Contact from "../content/contact.md";
+import * as Clients from "../content/clients.md";
+import * as Services from "../content/services.md";
+import * as Testimonials from "../content/testimonials.md";
+---
+
+<Layout title="Catherine Knepper">
+  <Header />
+  <Section stub={Hello.frontmatter.stub}>
+    <Hello.Content />
+  </Section>
+
+  <Books />
+
+  <Publishers />
+
+  <Section stub={About.frontmatter.stub}>
+    <About.Content />
+  </Section>
+  <Section stub={Clients.frontmatter.stub}>
+    <Clients.Content />
+  </Section>
+  <Section stub={Testimonials.frontmatter.stub}>
+    <Testimonials.Content />
+  </Section>
+  <Section stub={Services.frontmatter.stub}>
+    <Services.Content />
+  </Section>
+  <Section stub={Contact.frontmatter.stub}>
+    <Contact.Content />
+  </Section>
+</Layout>

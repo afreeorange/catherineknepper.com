@@ -1,0 +1,119 @@
+---
+import { Image } from "astro:assets";
+
+const images = import.meta.glob("./assets/books/*");
+const data = {
+  collaborative: [
+    "./assets/books/burnout.jpeg",
+    "./assets/books/anxious.jpeg",
+    "./assets/books/design.jpeg",
+    "./assets/books/leader.png",
+    "./assets/books/waitress.jpeg",
+    "./assets/books/wholebody.jpeg",
+    "./assets/books/eat.jpeg",
+    "./assets/books/heal.jpeg",
+    "./assets/books/adversity.jpeg",
+    "./assets/books/beach.jpeg",
+    "./assets/books/bluebox.jpeg",
+    "./assets/books/cloud.jpeg",
+    "./assets/books/death.jpeg",
+    "./assets/books/dome.jpeg",
+    "./assets/books/fearfaith.jpeg",
+    "./assets/books/fun.jpeg",
+    "./assets/books/grammar.jpeg",
+    "./assets/books/memory.jpeg",
+    "./assets/books/paris.jpeg",
+    "./assets/books/skytrain.jpeg",
+  ],
+  edited: [
+    "./assets/books/sleepwalker.jpeg",
+    "./assets/books/spirit.jpeg",
+    "./assets/books/stop.jpeg",
+    "./assets/books/superhuman.jpeg",
+    "./assets/books/unblocked.jpeg",
+    "./assets/books/adaosdance.jpeg",
+    "./assets/books/coaching.jpeg",
+    "./assets/books/coaching-workbook.jpeg",
+    "./assets/books/consumption.jpeg",
+    "./assets/books/countess.jpeg",
+    "./assets/books/deceived.jpeg",
+    "./assets/books/dontknow.jpeg",
+    "./assets/books/fitting.jpeg",
+    "./assets/books/leader.jpeg",
+    "./assets/books/mars.jpeg",
+    "./assets/books/miscarriage.jpeg",
+    "./assets/books/parthenon.jpeg",
+    "./assets/books/queenbreaker.jpeg",
+    "./assets/books/timberhill.jpeg",
+  ],
+};
+---
+
+<section>
+  <h2>Collaborative Works</h2>
+  <div class="books">
+    {
+      data.collaborative.map((_) => (
+        <div class="cover">
+        <!-- @ts-ignore -->
+        <Image src={images[_]()} alt={_} class={"book"} />
+        </div>
+      ))
+    }
+  </div>
+  <h2>Edited Works</h2>
+  <div class="books">
+    {
+      data.edited.map((_) => (
+        <div class="cover">
+        <!-- @ts-ignore -->
+        <Image src={images[_]()} alt={_} class={"book"} />
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  section {
+    @apply pt-4;
+  }
+
+  h2 {
+    @apply text-highlight text-2xl max-w-4xl px-8 mb-1 mx-auto;
+  }
+
+  .books {
+    @apply h-[19rem] space-x-8 overflow-x-scroll whitespace-nowrap px-8 py-4 scrollbar-none scrollbar-track-blue-950;
+    --scrollbar-thumb: var(--color-highlight);
+  }
+
+  .books + h2 {
+    @apply mt-2;
+  }
+
+  .cover {
+    @apply relative inline-block w-[10em] shadow-lg shadow-black;
+    transition: all 0.2s;
+
+    img {
+      @apply rounded-l-sm rounded-r-md;
+    }
+
+    /* This adds the 'hardcover' effect */
+    &::after {
+      content: "";
+      @apply absolute bottom-0 left-[5px] top-0;
+      left: 5px;
+      width: 2%;
+      background: rgba(0, 0, 0, 0.06);
+      box-shadow: 1px 0 8px rgba(255, 255, 255, 1);
+    }
+
+    &:hover {
+      @apply drop-shadow-lg;
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+  }
+</style>

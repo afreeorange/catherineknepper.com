@@ -1,0 +1,143 @@
+---
+import { Image } from "astro:assets";
+
+const images = import.meta.glob("./assets/publishers/*");
+const data = [
+  {
+    name: "Harvard Business Review",
+    stub: "hbr",
+    logo: "./assets/publishers/hbr.png",
+    url: "https://google.com",
+  },
+  {
+    name: "Hachette",
+    stub: "hachette",
+    logo: "./assets/publishers/hachette.png",
+    url: "https://google.com",
+  },
+  {
+    name: "HarperCollins",
+    stub: "harpercollins",
+    logo: "./assets/publishers/harpercollins.png",
+    url: "https://google.com",
+  },
+  {
+    name: "Crown Press",
+    stub: "crown",
+    logo: "./assets/publishers/crown.png",
+    url: "https://google.com",
+  },
+  {
+    name: "O'Reilly",
+    stub: "oreilly",
+    logo: "./assets/publishers/oreilly.png",
+    url: "https://google.com",
+  },
+  {
+    name: "simon",
+    stub: "simon",
+    logo: "./assets/publishers/simon.png",
+    url: "https://google.com",
+  },
+  {
+    name: "seal",
+    stub: "seal",
+    logo: "./assets/publishers/seal.png",
+    url: "https://google.com",
+  },
+  {
+    name: "Spiegel and Grau",
+    stub: "spiegel",
+    logo: "./assets/publishers/spiegel.png",
+    url: "https://google.com",
+  },
+  {
+    name: "SourceBooks",
+    stub: "sourcebooks",
+    logo: "./assets/publishers/sourcebooks.png",
+    url: "https://google.com",
+  },
+  {
+    name: "ou",
+    stub: "ou",
+    logo: "./assets/publishers/ou.png",
+    url: "https://google.com",
+  },
+  {
+    name: "Rodale Books",
+    stub: "rodale",
+    logo: "./assets/publishers/rodale.png",
+    url: "https://google.com",
+  },
+  {
+    name: "Penguin",
+    stub: "penguin",
+    logo: "./assets/publishers/penguin.png",
+    url: "https://google.com",
+  },
+  {
+    name: "St. Martin Press",
+    stub: "stmartin",
+    logo: "./assets/publishers/stmartin.png",
+    url: "https://google.com",
+  },
+  {
+    name: "Bloomsbury Press",
+    stub: "bloomsbury",
+    logo: "./assets/publishers/bloomsbury.png",
+    url: "https://google.com",
+  },
+  {
+    name: "Schiffer Books",
+    stub: "schiffer",
+    logo: "./assets/publishers/schiffer.png",
+    url: "https://google.com",
+  },
+  {
+    name: "Post Hill",
+    stub: "posthill",
+    logo: "./assets/publishers/posthill.png",
+    url: "https://google.com",
+  },
+];
+---
+
+<section data-name="publishers">
+  <!-- <h2>Publishers</h2> -->
+  <ul>
+    {
+      data.map(async (_) => (
+        <li>
+          <!-- @ts-ignore -->
+          <Image src={images[_.logo]()} alt={_.name} />
+        </li>
+      ))
+    }
+  </ul>
+</section>
+
+<style>
+  section {
+    @apply pt-4;
+
+    h2 {
+      @apply text-highlight text-2xl max-w-4xl px-8 mb-1 mx-auto;
+    }
+
+    ul {
+      @apply px-8 whitespace-nowrap overflow-auto scrollbar-none scrollbar-thumb-highlight scrollbar-track-blue-950;
+
+      li {
+        @apply mr-12 py-4 inline-block hover:cursor-pointer;
+      }
+    }
+
+    img {
+      @apply h-16 w-auto opacity-25 invert;
+
+      &:hover {
+        @apply opacity-100;
+      }
+    }
+  }
+</style>

@@ -1,0 +1,47 @@
+section[data-name="testimonials"] {
+  @apply border-b border-b-tertiary;
+
+  main {
+    @apply mx-auto p-8 max-w-4xl;
+
+    h2 {
+      color: var(--color-highlight);
+      @apply mb-8 text-center text-4xl font-bold;
+    }
+
+    blockquote {
+      @apply border-l border-dotted pl-4 border-l-tertiary;
+
+      p {
+        @apply mb-4;
+      }
+    }
+
+    blockquote + p {
+      font-family: "Noe Display";
+      @apply relative mb-8 ml-8 mt-2 text-secondary text-sm;
+    }
+
+    blockquote + p::before {
+      content: "\2013";
+      @apply absolute -left-4;
+    }
+
+    blockquote + p a {
+      text-decoration-color: var(--color-secondary);
+      @apply underline decoration-0 underline-offset-2;
+
+      &:hover {
+        @apply text-white decoration-white;
+      }
+
+      strong {
+        @apply text-white;
+      }
+    }
+
+    blockquote + p:last-child {
+      @apply mb-0;
+    }
+  }
+}

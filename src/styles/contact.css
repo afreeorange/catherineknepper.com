@@ -1,0 +1,56 @@
+section[data-name="contact"] {
+  main {
+    @apply mx-auto max-w-4xl p-8;
+
+    h2 {
+      @apply text-center text-4xl font-bold;
+      color: var(--color-highlight);
+    }
+
+    h3 {
+      @apply text-center  text-2xl;
+    }
+  }
+
+  form {
+    @apply mt-8;
+
+    * {
+      @apply bg-backgroundDark border-tertiary;
+    }
+  }
+
+  form input,
+  form textarea {
+    @apply mb-4 w-full rounded-md border p-2 text-white;
+  }
+
+  form textarea {
+    @apply h-64;
+  }
+
+  form input::placeholder,
+  form textarea::placeholder {
+    @apply text-tertiary;
+  }
+
+  form button[type="submit"] {
+    @apply w-full rounded-md border-4 border-double py-2 text-2xl italic;
+
+    svg {
+      @apply ml-2 inline-block w-4 stroke-1;
+      background: var(--color-background);
+      fill: var(--color-highlight);
+    }
+  }
+
+  form button[type="submit"]:hover {
+    background: var(--color-highlight);
+    border-color: var(--color-highlight);
+
+    svg {
+      @apply fill-white;
+      background: var(--color-highlight);
+    }
+  }
+}

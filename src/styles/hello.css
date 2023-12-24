@@ -1,0 +1,26 @@
+section[data-name="hello"] {
+  background-color: #080f4f;
+  opacity: 1;
+  background-image: radial-gradient(#024668 0.4px, transparent 0.4px),
+    radial-gradient(#024668 0.4px, #080f4f 0.4px);
+  background-size: 16px 16px;
+  background-position: 0 0, 8px 8px;
+
+  main {
+    @apply mx-auto max-w-4xl p-8;
+
+    p {
+      @apply text-xl;
+    }
+
+    p:nth-of-type(1) {
+      font-family: "Noe Display";
+      @apply text-4xl font-bold text-highlight;
+      text-shadow: 5px 5px 16px #111;
+    }
+
+    p:not(:last-of-type) {
+      @apply mb-6;
+    }
+  }
+}

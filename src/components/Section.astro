@@ -1,0 +1,13 @@
+---
+interface Props {
+  stub: string;
+}
+
+const { stub } = Astro.props;
+---
+
+<section id={stub} data-name={stub}>
+  <main>
+    <slot />
+  </main>
+</section>

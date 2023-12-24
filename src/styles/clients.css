@@ -1,0 +1,26 @@
+section[data-name="clients"] {
+  @apply border-b border-b-tertiary;
+
+  main {
+    @apply p-8;
+
+    h2 {
+      @apply text-center text-4xl font-bold;
+      color: var(--color-highlight);
+    }
+
+    h3 {
+      @apply text-center text-2xl font-bold;
+      color: var(--color-highlight-light);
+    }
+
+    ul {
+      @apply mt-8 gap-8 text-left text-lg md:columns-2 lg:columns-4;
+      column-rule: 1px dotted var(--color-tertiary);
+
+      li:not(:last-of-type) {
+        @apply mb-2;
+      }
+    }
+  }
+}

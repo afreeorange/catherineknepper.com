@@ -1,0 +1,47 @@
+<header>
+  <h1>
+    <a href="/" title="Home">Catherine Knepper</a>
+  </h1>
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#clients">Clients</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  header {
+    @apply flex px-8 py-4 text-lg;
+
+    h1 {
+      @apply flex-grow font-bold uppercase tracking-wide;
+      font-family: "Eksell Display Large";
+
+      a {
+        @apply transition-all duration-300 hover:text-highlightLight;
+      }
+    }
+
+    ul {
+      @apply flex gap-4;
+      font-family: "Eksell Display Large";
+
+      li:not(:last-of-type)::after {
+        content: "/";
+        @apply ml-4 text-tertiary;
+      }
+
+      li a {
+        @apply hover:text-highlightLight transition-all duration-300;
+      }
+
+      li.active a {
+        @apply text-highlight;
+      }
+    }
+  }
+</style>

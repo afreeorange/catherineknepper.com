@@ -1,0 +1,42 @@
+section[data-name="services"] {
+  @apply border-b border-b-tertiary;
+
+  main {
+    @apply mx-auto max-w-4xl p-8;
+
+    > div > p:first-of-type {
+      @apply text-xl;
+    }
+
+    h2 {
+      @apply mb-8 text-center text-4xl font-bold text-highlight;
+    }
+
+    h3 {
+      @apply mt-8 border-t border-dotted pt-8 text-center text-2xl font-bold;
+      border-color: var(--color-tertiary);
+      color: var(--color-highlight-light);
+    }
+
+    h3 + p {
+      @apply mt-6;
+    }
+
+    h4 {
+      @apply mb-4 text-center text-xl;
+      color: var(--color-highlight-light);
+    }
+
+    p {
+      @apply mb-4;
+    }
+
+    ul {
+      @apply my-6 list-disc space-y-3;
+    }
+
+    mark {
+      @apply bg-transparent text-secondary;
+    }
+  }
+}

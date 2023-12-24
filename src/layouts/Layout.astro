@@ -1,0 +1,95 @@
+---
+import.meta.glob("../styles/*.css");
+
+const data = {
+  title: "Catherine Knepper Writing Services, LLC",
+  description:
+    "I help smart, talented people bring their ideas to the page and to the marketplace.",
+  image: "http://catherineknepper.com/catherine-small.jpg",
+};
+---
+
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="description" content={data.description} />
+    <meta name="viewport" content="width=device-width" />
+
+    <meta property="og:title" content={data.title} />
+    <meta property="og:description" content={data.description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content={data.image} />
+    <meta property="og:url" content="http://catherineknepper.com/" />
+
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <title>{data.title}</title>
+    <script
+      async
+      defer
+      data-domain="catherineknepper.com"
+      src="https://plausible.io/js/plausible.js"
+    >
+    </script>
+  </head>
+  <body>
+    <slot />
+  </body>
+  <footer>
+    <p>
+      {new Date().getFullYear()}, Catherine Knepper Writing Services, LLC.
+      <br />I respect your privacy and use{" "}
+      <a href="https://plausible.io/" title="Plausible Analytics">Plausible</a>{
+        " "
+      }
+       for this website&#8217;s analytics.
+    </p>
+  </footer>
+</html>
+
+<style is:global>
+  :root {
+    --color-background: #080f4f;
+    --color-background-dark: #00042b;
+    --color-highlight-primary: #f00;
+    --color-highlight: #f60;
+    --color-highlight-light: #f90;
+    --color-text: #fff;
+
+    --color-secondary: #78cce3;
+    --color-tertiary: #005b89;
+
+    --transition-delay: 0.25s;
+  }
+
+  html,
+  body {
+    @apply max-w-full overflow-x-hidden scroll-smooth bg-background text-white;
+    font-size: 18px;
+    font-family: "Noe Text";
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Eksell Display Large";
+  }
+
+  footer {
+    font-family: "Noe Display";
+    @apply mb-12 p-4 text-sm text-tertiary;
+
+    p {
+      @apply ml-3 block w-fit;
+      margin: 0 auto;
+    }
+
+    a {
+      @apply underline underline-offset-2 hover:text-white;
+    }
+  }
+</style>

@@ -1,0 +1,9 @@
+/* TEAM */
+	Author: Nikhil Anand
+	Contact: mail [at] nikhil.io
+	Twitter: @afreeorange
+	From: Des Moines, Iowa, USA
+
+/* SITE */
+	Language: English
+	Software: Node, Astro, CSS, HTML, JavaScript, bash
