@@ -5,8 +5,6 @@ order: 50
 
 ## Testimonials
 
-<div>
-
 > Catherine served as a fabulous, much-needed second reader on my (rather long and complicated) novel, _Cloud Cuckoo Land_. She helped me tighten language, repair chronological wrinkles, clarify muddled passages, and even invent some terminology. And she served as an essential sounding board for all sorts of revision ideas. Most importantly, Catherine helped me stay confident and buoyant when I was exhausted from the work of assembling the book. I wholeheartedly recommend her services.
 
 [**Anthony Doerr**](https://www.anthonydoerr.com/author/bio), Pulitzer-prize-winning author of the novels [_Cloud Cuckoo Land_](https://bookshop.org/books/cloud-cuckoo-land-9781982168438/9781982168438), [_All the Light We Cannot See_](https://www.anthonydoerr.com/books/all-the-light-we-cannot-see/), and [_About Grace_](https://www.anthonydoerr.com/books/about-grace/); the story collections [_The Shell Collector_](https://www.anthonydoerr.com/books/the-shell-collector/) and [_Memory Wall_](https://www.anthonydoerr.com/books/memory-wall/); and the memoir [_Four Seasons in Rome_](https://www.anthonydoerr.com/books/four-seasons-in-rome/)
@@ -30,6 +28,8 @@ order: 50
 > Catherine puts great dedication and care into her work. She spends the time to do what's best for her clients, and handled my writing with an incredible amount of thoughtfulness. There is no doubt Catherine is in your court. She gave me the direct feedback I needed, and set me on a smart path forward. Working with Catherine on my manuscript was one of the most enjoyable projects I've experienced over a decades-long career.
 
 [**Alison McCauley**](https://www.alisonmccauley.io/bio), CEO and Founder of [Unblocked Future](https://www.unblockedfuture.com/) and author of [_Unblocked: How Blockchains Will Change Your Business (and What to Do About It)_](https://www.amazon.com/Unblocked-Blockchains-Change-Business-about/dp/0998042005)
+
+<div class="">
 
 > Catherine Knepper is a dream of an editor. She excels at both diagnosing the problem and figuring out a way forward. This combination is extremely rare: it takes special skill to understand not only what a writing project is, but what it might be. What's especially wonderful about Catherine is that she is able to explain both what is wrong and what is right in a clear, supportive manner. I'd recommend her to any writer who wants a super-smart, talented, warm and professional editor who is both thorough and creative. She is the real deal, and seeing her work left me with just one word - wow.
 
@@ -71,4 +71,3 @@ order: 50
 
 **Allen & Andrea Beach**, founders of [Argus Connection, Inc.](http://www.argusx.com/) and [BAW Ventures, LLC](http://www.beawolf.com/) and authors of [_Be a Wolf: The Entrepreneur's Guide to Becoming a Leader of the Pack_](https://www.amazon.com/Be-Wolf-Entrepreneurs-Becoming-Leader/dp/1450590616)
 
-</div>

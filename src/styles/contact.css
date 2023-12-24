@@ -3,12 +3,11 @@ section[data-name="contact"] {
     @apply mx-auto max-w-4xl p-8;
 
     h2 {
-      @apply text-center text-4xl font-bold;
-      color: var(--color-highlight);
+      @apply text-center text-4xl font-bold text-highlight;
     }
 
     h3 {
-      @apply text-center  text-2xl;
+      @apply text-center  text-2xl text-highlightLight;
     }
   }
 

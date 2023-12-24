@@ -5,7 +5,7 @@ const data = {
   title: "Catherine Knepper Writing Services, LLC",
   description:
     "I help smart, talented people bring their ideas to the page and to the marketplace.",
-  image: "http://catherineknepper.com/catherine-small.jpg",
+  image: `https://catherineknepper.com/og.jpg`,
 };
 ---
 
@@ -21,7 +21,7 @@ const data = {
     <meta property="og:description" content={data.description} />
     <meta property="og:type" content="website" />
     <meta property="og:image" content={data.image} />
-    <meta property="og:url" content="http://catherineknepper.com/" />
+    <meta property="og:url" content="https://catherineknepper.com" />
 
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="sitemap" href="/sitemap-index.xml" />
@@ -31,9 +31,14 @@ const data = {
       async
       defer
       data-domain="catherineknepper.com"
-      src="https://plausible.io/js/plausible.js"
-    >
-    </script>
+      src="https://plausible.io/js/plausible.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script
+      is:inline
+      src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   </head>
   <body>
     <slot />
@@ -52,17 +57,14 @@ const data = {
 
 <style is:global>
   :root {
-    --color-background: #080f4f;
     --color-background-dark: #00042b;
+    --color-background: #080f4f;
+    --color-highlight-light: #f90;
     --color-highlight-primary: #f00;
     --color-highlight: #f60;
-    --color-highlight-light: #f90;
-    --color-text: #fff;
-
     --color-secondary: #78cce3;
     --color-tertiary: #005b89;
-
-    --transition-delay: 0.25s;
+    --color-text: #fff;
   }
 
   html,

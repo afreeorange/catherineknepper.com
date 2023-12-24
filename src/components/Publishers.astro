@@ -1,4 +1,5 @@
 ---
+import "swiper/css";
 import { Image } from "astro:assets";
 
 const images = import.meta.glob("./assets/publishers/*");
@@ -103,7 +104,6 @@ const data = [
 ---
 
 <section data-name="publishers">
-  <!-- <h2>Publishers</h2> -->
   <ul>
     {
       data.map(async (_) => (
@@ -133,7 +133,7 @@ const data = [
     }
 
     img {
-      @apply h-16 w-auto opacity-25 invert;
+      @apply h-24 w-auto opacity-25 invert;
 
       &:hover {
         @apply opacity-100;
@@ -141,3 +141,25 @@ const data = [
     }
   }
 </style>
+
+<script>
+  import { Swiper } from "swiper";
+  new Swiper(".swiper", {
+    speed: 1000,
+    // spaceBetween: 100,
+    slidesPerView: "auto",
+    centeredSlides: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    scrollbar: {
+      el: ".swiper-scrollbar",
+      hide: false,
+    },
+  });
+</script>

@@ -1,5 +1,5 @@
 section[data-name="about"] {
-  background: url(/assets/img/catherine-about.jpg) top right no-repeat;
+  background: url(/about.webp) top right no-repeat;
   @apply bg-cover py-6;
 
   main {

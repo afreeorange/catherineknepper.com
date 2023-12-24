@@ -14,7 +14,6 @@ export default {
         highlight: "var(--color-highlight)",
         highlightLight: "var(--color-highlight-light)",
         highlightprimary: "var(--color-highlight-primary)",
-        text: "var(--color-text)",
         secondary: "var(--color-secondary)",
         tertiary: "var(--color-tertiary)",
       },

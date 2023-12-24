@@ -12,15 +12,22 @@
   "dependencies": {
     "@astrojs/check": "^0.3.3",
     "@astrojs/mdx": "^2.0.1",
+    "@astrojs/react": "^3.0.8",
     "@astrojs/sitemap": "^3.0.3",
     "@astrojs/tailwind": "^5.0.3",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
     "astro": "^4.0.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "swiper": "^11.0.5",
     "tailwind-scrollbar": "^3.0.5",
     "tailwindcss": "^3.3.6",
     "typescript": "^5.3.3"
   },
   "devDependencies": {
-    "@tailwindcss/nesting": "0.0.0-insiders.565cd3e"
+    "@tailwindcss/nesting": "0.0.0-insiders.565cd3e",
+    "prettier": "^3.1.1",
+    "prettier-plugin-astro": "^0.12.2"
   }
 }
