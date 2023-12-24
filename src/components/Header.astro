@@ -15,14 +15,15 @@
 
 <style>
   header {
-    @apply flex px-8 py-4 text-lg;
+    @apply flex px-8 py-4 text-lg w-full z-50;
 
     h1 {
       @apply flex-grow font-bold uppercase tracking-wide;
       font-family: "Eksell Display Large";
+      word-spacing: 0.25em;
 
       a {
-        @apply transition-all duration-300 hover:text-highlightLight;
+        @apply hover:text-highlightLight;
       }
     }
 
@@ -36,7 +37,7 @@
       }
 
       li a {
-        @apply hover:text-highlightLight transition-all duration-300;
+        @apply hover:text-highlight;
       }
 
       li.active a {

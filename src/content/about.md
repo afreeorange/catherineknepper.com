@@ -13,7 +13,7 @@ I hold degrees in English literature and philosophy & religion (B.A.), theology 
 
 I'm based in Des Moines, Iowa, where I do my best to keep up with two teenagers and [a rescue husky named Luna](https://www.instagram.com/lunabear_the_husky_/).
 
-If you have further questions or would like to discuss your work, please contact me at [`ckneppereditor@gmail.com`](mailto:ckneppereditor@gmail.com) or just fill out [the contact form](/contact).
+If you have further questions or would like to discuss your work, please contact me at [`ckneppereditor@gmail.com`](mailto:ckneppereditor@gmail.com) or just fill out [the contact form](#contact).
 
 <small>
 
