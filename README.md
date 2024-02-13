@@ -5,6 +5,7 @@
 - [ ] Sticky Header
 - [ ] Mobile
 - [ ] Colophon
+- [ ] https://flickity.metafizzy.co/style
 
 ## References
 
