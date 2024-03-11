@@ -10,7 +10,7 @@ export default defineConfig({
     assets: "_assets",
   },
   devToolbar: {
-    enabled: false,
+    enabled: true,
   },
   integrations: [tailwind(), mdx()],
 });

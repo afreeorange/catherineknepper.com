@@ -1,5 +1,5 @@
 ---
-import { Image } from "astro:assets";
+import { Image } from 'astro:assets';
 
 const images = import.meta.glob("./assets/books/*");
 const data = {
@@ -51,27 +51,22 @@ const data = {
 
 <section>
   <h2>Collaborative Works</h2>
-  <div class="books">
+  <!-- <div class="books"> -->
+    <div class="swiper">
+    <div class="swiper-wrapper">
     {
       data.collaborative.map((_) => (
-        <div class="cover">
+        <div class="cover swiper-slide">
         <!-- @ts-ignore -->
         <Image src={images[_]()} alt={_} class={"book"} />
         </div>
       ))
     }
+    </div>
+    <div class="swiper-pagination"></div>
   </div>
-  <h2>Edited Works</h2>
-  <div class="books">
-    {
-      data.edited.map((_) => (
-        <div class="cover">
-        <!-- @ts-ignore -->
-        <Image src={images[_]()} alt={_} class={"book"} />
-        </div>
-      ))
-    }
-  </div>
+  <!-- </div> -->
+
 </section>
 
 <style>
@@ -84,13 +79,27 @@ const data = {
   }
 
   .books {
-    @apply h-[19rem] space-x-8 overflow-x-scroll whitespace-nowrap px-8 py-4 scrollbar-none scrollbar-track-blue-950;
-    --scrollbar-thumb: var(--color-highlight);
+    /* @apply h-[19rem] ; */
+    /* @apply h-[19rem] space-x-8 whitespace-nowrap px-8 py-4; */
+    /* --scrollbar-thumb: var(--color-highlight); */
   }
 
   .books + h2 {
     @apply mt-2;
   }
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-wrapper {
+    background: #000;
+  }
+
+  .swiper-slide {
+    @apply max-w-[12em];
+   }
+
 
   .cover {
     @apply relative inline-block w-[10em] shadow-lg shadow-black;
@@ -117,3 +126,20 @@ const data = {
     }
   }
 </style>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script is:inline src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script is:inline>
+const swiper = new Swiper('.swiper', {
+  loop: true,
+  freeMode: true,
+  // slidesPerView: "auto",
+  centeredSlides: false,
+  // modules: [Navigation, Pagination, Scrollbar],
+  pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+});
+swiper.slidesPerViewDynamic();
+</script>
